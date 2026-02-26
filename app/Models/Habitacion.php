@@ -10,7 +10,7 @@ class Habitacion extends Model
     use HasFactory;
 
     // Si la tabla tiene un nombre diferente, puedes especificarlo aquí
-    // protected $table = 'habitaciones';
+    protected $table = 'habitaciones';
 
     // Atributos que pueden ser asignados de manera masiva
     protected $fillable = [
