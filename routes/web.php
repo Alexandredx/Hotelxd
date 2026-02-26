@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\PagoController;
+use App\Http\Controllers\HabitacionController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,3 +19,5 @@ Route::resource('reservas', ReservaController::class);
 // Rutas para los pagos
 Route::get('pagos/create/{reservaId}', [PagoController::class, 'create'])->name('pagos.create');
 Route::post('pagos/store/{reservaId}', [PagoController::class, 'store'])->name('pagos.store');
+
+Route::resource('habitaciones', HabitacionController::class);
